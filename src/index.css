@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 22px;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; 
+  border: 1px solid mediumblue; 
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 30px auto;
+  padding: 40px 30px;
+  border-radius: 10px;
+}
+
+header {
+  width: 100%;
+  padding: 0 0.25em;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img{
+  width: 40px;
+  transform: translateY(10%);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+footer {
+  width: 100%;
+  padding: 0.25em;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: aliceblue;
+  display: grid;
+  place-content: center;
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  padding: 0 0.25rem 0.25rem;
+}
+
+ul li::before {
+  content: "\200B";
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin: 0.25rem 0;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.item:first-child {
+  margin: 0;
+}
+
+.item input[type="checkbox"] {
+  text-align: center;
+  width: 2.5rem;
+  width: 48px;
+  min-width: 48px;
+  height: 2.5rem;
+  height: 48px;
+  min-height: 48px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.item input[type="checkbox"]:focus + label {
+  text-decoration: underline;
+}
+
+.item > label {
+  font-size: 0.75rem;
+  flex-grow: 1;
+}
+
+.item svg {
+  width: 48px;
+  min-width: 48px;
+  height: 36px;
+  font-size: 1rem;
+  color: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  cursor: pointer;
+}
+
+.item svg:focus, 
+.item svg:hover {
+  color: rgb(223, 10, 10);
+  outline: none;
+}
+
+.addForm {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
+}
+
+.addForm label {
+  position: absolute;
+  left: -99999px;
+}
+
+.addForm input[type='text'] {
+  flex-grow: 1;
+  max-width: calc(100% - 50px);
+  min-height: 48px;
+  font-size: 0.8rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+}
+
+button {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: aliceblue;
+  color: #302b63;
+  cursor: pointer;
+}
+
+button:focus, 
+button:hover {
+  color: #000;
+  background-color: #179504;
+  outline: none;
+}
+
+.searchForm {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.25rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
+}
+
+.searchForm label {
+  position: absolute;
+  left: -99999px;
+}
+
+.searchForm input[type='text'] {
+  flex-grow: 1;
+  max-width: 100%;
+  min-height: 48px;
+  font-size: 0.8rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.edit-item-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.edit-item-container input[type='text'] {
+  background: transparent;
+  width: 10rem;
+  border-radius: 10px;
+  padding-left: 5px;
+  font-size: 0.8rem;
+  border: 1px solid #555;
+}
+
+.edit-item-container button{
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check{
+  color: green;
+}
+
+.item .check svg:hover{
+  color: rgba(0, 128, 0, 0.5);
+}
+
+.undo{
+  color: orange;
+}
+
+.item .undo svg:hover{
+  color: rgba(255, 166, 0, 0.5);
+}
+
+.item .edit-icon:hover{
+  color: springgreen;
+}
+
+@media screen and (max-width: 600px) {
+  .edit-item-container input[type='text'] {
+    width: 5rem;
+  }
+}
